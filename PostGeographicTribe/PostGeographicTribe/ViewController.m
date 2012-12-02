@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "TouchXML.h"
 
 @interface ViewController ()
 
@@ -44,8 +45,7 @@
     
     self.tripIt.delegate = self;
     
-    if(!self.tripIt.auth.hasAccessToken)
-        [self.tripIt performOauthFlow];
+    [self.tripIt performOauthFlow];
 }
 
 - (void)doAnAuthenticatedAPIFetch
@@ -90,7 +90,24 @@
         // fetch failed
         NSLog(@"API fetch error: %d - %@", status, error);
     }
-    self.text.text = returnStr;
+    
+    NSMutableString *str = [NSMutableString string];
+    
+    CXMLDocument *parser = [[CXMLDocument alloc] initWithXMLString:returnStr options:0 error:nil];
+    
+    for(CXMLElement *element in [parser nodesForXPath:@"Response/Trip" error:nil]) {
+        
+        NSString *start = [[[element elementsForName:@"start_date"] lastObject] XMLString];
+        NSString *end = [[[element elementsForName:@"end_date"] lastObject] XMLString];
+        
+        CXMLElement *addressEle = [[element elementsForName:@"PrimaryLocationAddress"] lastObject];
+        
+        NSString *address = [[[addressEle elementsForName:@"address"] lastObject] XMLString];
+        
+        [str appendFormat:@"%@\nStart: %@\nEnd:%@\n\n", address, start, end];
+    }
+    
+    self.text.text = str;
     NSLog(@"API response: %@", returnStr);
 }
 
