@@ -16,8 +16,7 @@
 		58436A42166AF4020011627C /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 58436A41166AF4020011627C /* Default.png */; };
 		58436A44166AF4020011627C /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 58436A43166AF4020011627C /* Default@2x.png */; };
 		58436A46166AF4020011627C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 58436A45166AF4020011627C /* Default-568h@2x.png */; };
-		58436A49166AF4020011627C /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58436A47166AF4020011627C /* MainStoryboard_iPhone.storyboard */; };
-		58436A4C166AF4020011627C /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58436A4A166AF4020011627C /* MainStoryboard_iPad.storyboard */; };
+		58436A49166AF4020011627C /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58436A47166AF4020011627C /* MainStoryboard.storyboard */; };
 		58436A4F166AF4020011627C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58436A4E166AF4020011627C /* ViewController.m */; };
 		58436A9F166AF40E0011627C /* GTMHTTPFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 58436A74166AF40E0011627C /* GTMHTTPFetcher.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		58436AA0166AF40E0011627C /* GTMHTTPFetcherLogging.m in Sources */ = {isa = PBXBuildFile; fileRef = 58436A76166AF40E0011627C /* GTMHTTPFetcherLogging.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -41,8 +40,7 @@
 		58436A41166AF4020011627C /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		58436A43166AF4020011627C /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		58436A45166AF4020011627C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		58436A48166AF4020011627C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
-		58436A4B166AF4020011627C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		58436A48166AF4020011627C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		58436A4D166AF4020011627C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		58436A4E166AF4020011627C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		58436A73166AF40E0011627C /* GTMHTTPFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMHTTPFetcher.h; sourceTree = "<group>"; };
@@ -197,8 +195,7 @@
 		58436AC3166AF7620011627C /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				58436A47166AF4020011627C /* MainStoryboard_iPhone.storyboard */,
-				58436A4A166AF4020011627C /* MainStoryboard_iPad.storyboard */,
+				58436A47166AF4020011627C /* MainStoryboard.storyboard */,
 			);
 			name = Storyboards;
 			sourceTree = "<group>";
@@ -267,8 +264,7 @@
 				58436A42166AF4020011627C /* Default.png in Resources */,
 				58436A44166AF4020011627C /* Default@2x.png in Resources */,
 				58436A46166AF4020011627C /* Default-568h@2x.png in Resources */,
-				58436A49166AF4020011627C /* MainStoryboard_iPhone.storyboard in Resources */,
-				58436A4C166AF4020011627C /* MainStoryboard_iPad.storyboard in Resources */,
+				58436A49166AF4020011627C /* MainStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,20 +297,12 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		58436A47166AF4020011627C /* MainStoryboard_iPhone.storyboard */ = {
+		58436A47166AF4020011627C /* MainStoryboard.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				58436A48166AF4020011627C /* en */,
 			);
-			name = MainStoryboard_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		58436A4A166AF4020011627C /* MainStoryboard_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				58436A4B166AF4020011627C /* en */,
-			);
-			name = MainStoryboard_iPad.storyboard;
+			name = MainStoryboard.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

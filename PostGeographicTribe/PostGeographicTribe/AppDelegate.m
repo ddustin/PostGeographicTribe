@@ -7,6 +7,11 @@
 //
 
 #import "AppDelegate.h"
+#import "ViewController.h"
+
+@interface AppDelegate()
+
+@end
 
 @implementation AppDelegate
 
@@ -41,6 +46,21 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+// Need to implement this function in order to get the callback redirect from the browser after
+// the user signs in to TripIt to approve the app.
+- (BOOL)application:(UIApplication *)application
+            openURL:(NSURL *)url
+  sourceApplication:(NSString *)sourceApplication
+         annotation:(id)annotation {
+    if (!url) {
+        return NO;
+    }
+    
+    [(id)[(ViewController*)self.window.rootViewController tripIt] performGetAuthorization:url];
+    
+    return YES;
 }
 
 @end
