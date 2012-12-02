@@ -25,7 +25,7 @@
 		<dict>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>com.dustin.pgt</string>
+				<string>tripitapp</string>
 			</array>
 		</dict>
 		<dict>

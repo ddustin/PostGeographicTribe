@@ -9,6 +9,14 @@
 #import "ViewController.h"
 #import "TouchXML.h"
 
+@interface TripIt (Private)
+
+- (void)performApiFetch:(NSString *)urlStr
+                 isPost:(BOOL)post
+          withXmlString:(NSString *)xmlString;
+
+@end
+
 @interface ViewController ()
 
 @property (nonatomic, strong) GTMOAuthAuthentication *mAuth;
@@ -50,7 +58,9 @@
 
 - (void)doAnAuthenticatedAPIFetch
 {
-    [self.tripIt testApiGet];
+    [self.tripIt performApiFetch:@"https://api.tripit.com/v1/list/trip/traveler/all/past/true"
+                          isPost:false
+                   withXmlString:nil];
 }
 
 // Implement TripItApiDelegate protocol
