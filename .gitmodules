@@ -1,3 +1,6 @@
 [submodule "objective_c_binding_v1"]
 	path = objective_c_binding_v1
 	url = git@github.com:tripit/objective_c_binding_v1.git
+[submodule "TouchXML"]
+	path = TouchXML
+	url = git@github.com:TouchCode/TouchXML.git
